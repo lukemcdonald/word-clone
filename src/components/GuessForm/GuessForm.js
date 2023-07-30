@@ -1,10 +1,10 @@
 import React from "react";
 
-function GuessForm() {
+function GuessForm({ onSubmit }) {
   function handleSubmit(event) {
     event.preventDefault();
-    const {guess} = event.target;
-    console.log({guess: guess.value.toUpperCase()});
+    const { guess } = event.target;
+    onSubmit(guess.value.toUpperCase());
     guess.value = "";
   };
 

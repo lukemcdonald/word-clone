@@ -13,12 +13,15 @@ function Game() {
 
   function handleOnSubmit(newGuess) {
     console.log({ newGuess })
-    setGuesses((prevGuesses) => [...prevGuesses, newGuess]);
+    setGuesses((prevGuesses) => [
+      ...prevGuesses,
+      newGuess
+    ]);
   }
 
   return (
     <>
-      <GuessResults guesses={guesses} />
+      <GuessResults guesses={guesses} answer={answer} />
       <GuessForm onSubmit={handleOnSubmit} />
     </>
   );

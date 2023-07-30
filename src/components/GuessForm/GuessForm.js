@@ -4,7 +4,7 @@ function GuessForm({ onSubmit }) {
   function handleSubmit(event) {
     event.preventDefault();
     const { guess } = event.target;
-    onSubmit(guess.value.toUpperCase());
+    onSubmit(guess.value);
     guess.value = "";
   };
 
